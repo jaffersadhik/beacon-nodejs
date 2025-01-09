@@ -22,7 +22,7 @@ EXPOSE 80
 # Start the Angular application when the container starts
 CMD ["npm", "start"]
 
-RUN cp -rp /app/dist/* /app/.
+#RUN cp -rp /app/dist/* /app/.
 
 # Use a lightweight web server to serve the Angular app
 #FROM nginx:alpine

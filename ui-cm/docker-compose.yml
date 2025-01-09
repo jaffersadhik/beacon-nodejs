@@ -2,20 +2,10 @@ version: '3'
 services:
   # Angular Application
   angular-app:
-    image: cmui:dev
+    image: dk-reg.mas:5000/angular-cm:31dec2024
     build:
-      context: ./src
+      context: .
       dockerfile: Dockerfile
-    ports:
-      - "4201:4201"
-    volumes:
-      - ./app:/app
-    command: ["npm", "start"]
+   
 
-  # Nginx Server
-  nginx:
-    image: nginx:latest
-    ports:
-      - "81:81"
-    volumes:
-      - ./app/dist:/usr/share/nginx/html
+  
