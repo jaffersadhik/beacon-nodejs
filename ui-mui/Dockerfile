@@ -3,6 +3,8 @@ FROM node:14 AS build
 
 # Set the working directory in the container
 WORKDIR /app
+ENV TZ="Asia/Kolkata"
+
 
 # Copy package.json and package-lock.json to the container
 COPY package*.json ./

@@ -1,4 +1,5 @@
 FROM nginx:latest
+ENV TZ="Asia/Kolkata"
 
 # Copy built Angular app from the first stage to the Nginx image
 COPY ./target /usr/share/nginx/
