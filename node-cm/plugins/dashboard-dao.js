@@ -47,7 +47,8 @@ const dashdao = async (fastify, opts) => {
         if (_.eq(countfor, 'mtsuccess')) terms = { sub_status: ['Success'] };
         if (_.eq(countfor, 'dnsuccess')) terms = { dn_delivery_status: ['Delivered'] };
         if (_.eq(countfor, 'mtrejected')) terms = { sub_status: ['Rejected', 'Failed', 'Expired'] };
-        if (_.eq(countfor, 'dnfailed')) terms = { dn_delivery_status: ['Failed', 'Expired'] };
+     //   if (_.eq(countfor, 'dnfailed')) terms = { dn_delivery_status: ['Failed', 'Expired'] };
+	 if (_.eq(countfor, 'dnfailed')) terms = { dn_delivery_status: ['Failed'] };
 
         const { body } = await fastify.elastic.count({
             index: 'sub_del_t2',
